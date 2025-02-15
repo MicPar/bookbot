@@ -1,6 +1,4 @@
 def main():
-    #file_path = "github.com/MicPar/bookbot/test.txt"
-    #file_path = "github.com/MicPar/bookbot/books/frankenstein.txt"
     file_path = "books/frankenstein.txt"
     file_text = get_text(file_path)
     number_of_words = get_number_of_words(file_text)
@@ -26,15 +24,10 @@ def get_character_inventory(file_text):
 def print_report(file_path, number_of_words, character_inventory):
     print(f"--- Begin report of {file_path} ---")
     print(f"{number_of_words} words in the document")
-    print("")
-
-    #def sort_alpha(dict):
-    #    return dict[]
-
+    print()
     for char in dict(sorted(character_inventory.items())):
         if char.isalpha() == True:
             print(f"The '{char}' character was found {character_inventory[char]} times")
-
     print("--- End report ---")
 
 
